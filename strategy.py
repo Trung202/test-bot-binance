@@ -1,7 +1,7 @@
 import pandas as pd
 import Binance
 import math
-from talib import EMA, ATR, RSI, TRIX, MA
+#from talib import EMA, ATR, RSI, TRIX, MA
 import requests
 
 class start:
@@ -33,9 +33,24 @@ class start:
 
 		df = self.df
 		volume2 = float(df['volume'].iloc[-2])
+		volume3 = float(df['volume'].iloc[-3])
+		volume4 = float(df['volume'].iloc[-4])
+		volume5 = float(df['volume'].iloc[-5])
+		volume6 = float(df['volume'].iloc[-6])
+		volume7 = float(df['volume'].iloc[-7])
+		volume8 = float(df['volume'].iloc[-8])
+		volume9 = float(df['volume'].iloc[-9])
+		volume10 = float(df['volume'].iloc[-10])
+		volume11 = float(df['volume'].iloc[-11])
+		volume12 = float(df['volume'].iloc[-12])
+		volume13 = float(df['volume'].iloc[-13])
+		volume14 = float(df['volume'].iloc[-14])
+		volume15 = float(df['volume'].iloc[-15])
+		volume16 = float(df['volume'].iloc[-16])
 
-		v2 = MA(df['volume'], timeperiod=14)
-		v2= float(v2.iloc[-2])
+		#v2 = MA(df['volume'], timeperiod=14)
+		#v2= float(v2.iloc[-2])
+		v2= (volume3+volume4+volume5+volume6+volume7+volume8+volume9+volume10+volume11+volume12+volume13+volume14+volume15+volume16)/14
 
 		open = float(df['open'].iloc[-2])
 		close = float(df['close'].iloc[-2])
