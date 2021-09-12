@@ -45,7 +45,7 @@ class start:
 		"""Set up your strategy here 
 		Conditions for trading"""
 
-		break1 = volume2 > 1.1*v2
+		break1 = volume2 > 0.1*v2
 		giatang = close>1.04*open
 		giagiam=close<0.94*open
 
@@ -97,4 +97,4 @@ def run():
 
     for i in t['symbols']:
         if i['symbol'].endswith(quote):
-            start(i['symbol'], quote, interval= '5m')
+            start(i['symbol'], quote, interval= '1m')
