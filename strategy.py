@@ -45,7 +45,7 @@ class start:
 		"""Set up your strategy here 
 		Conditions for trading"""
 
-		break1 = volume2 > 2*v2
+		break1 = volume2 > 1.1*v2
 		giatang = close>1.04*open
 		giagiam=close<0.94*open
 
